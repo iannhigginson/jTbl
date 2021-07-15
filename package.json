@@ -1,0 +1,20 @@
+{
+  "name": "jtbl",
+  "version": "1.0.0",
+  "description": "A JSON driven HTML table builder.",
+  "main": "index.html",
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "JSON",
+    "JavaScript",
+    "HTML"
+  ],
+  "author": "Ian Neal Higginson",
+  "license": "MIT"
+}

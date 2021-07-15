@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>jTbl</title>
+ <script type="text/javascript" src="./jTbl.js"></script>
+ <script type="text/javascript">
+
+  document.addEventListener("DOMContentLoaded", () => {
+
+   setUpSignUp();
+
+  });
+
+  function setUpSignUp() {
+   let tblStructure = {
+    "rows": {
+     "cells": {
+      "0": {
+       "0": "&nbsp;",
+       "1": "&nbsp;",
+       "2": "&nbsp;",
+       "3": "&nbsp;",
+       "4": "&nbsp;"
+      },
+      "1": {
+       "0": "&nbsp;",
+       "1": {
+        "element": "label",
+        "innerText": "Enter you're name"
+       },
+       "2": "&nbsp;",
+       "3": {
+        "element": "input",
+        "id": "name",
+        "size": "50",
+        "type": "text"
+       },
+       "4": "&nbsp;"
+      },
+      "2": {
+       "0": "&nbsp;",
+       "1": {
+        "element": "label",
+        "innerText": "Enter you're email"
+       },
+       "2": "&nbsp;",
+       "3": {
+        "element": "input",
+        "id": "email",
+        "size": "50",
+        "type": "text"
+       },
+       "4": "&nbsp;"
+      },
+      "3": {
+       "0": "&nbsp;",
+       "1": {
+        "element": "label",
+        "innerText": "Enter you're password"
+       },
+       "2": "&nbsp;",
+       "3": {
+        "element": "input",
+        "id": "pass",
+        "size": "50",
+        "type": "password"
+       },
+       "4": "&nbsp;"
+      },
+      "4": {
+       "0": "&nbsp;",
+       "1": "&nbsp;",
+       "2": "&nbsp;",
+       "3": "&nbsp;",
+       "4": "&nbsp;"
+      },
+      "5": {
+       "0": "&nbsp;",
+       "1": {
+        "element": "button",
+        "class": "centered",
+        "innerText": "Save",
+        "onclick": "signUp()"
+       },
+       "2": "&nbsp;",
+       "3": {
+        "element": "button",
+        "class": "centered",
+        "innerText": "Cancel",
+        "onclick": "cancel()"
+       },
+       "4": "&nbsp;"
+      }
+     }
+    }
+   };
+
+   let mTbl = inhTbl(tblStructure);
+   pageHead.innerHTML = '<h1 class="center">Sign up.</h1>';
+   pageBody.innerHTML = "";
+   pageBody.appendChild(mTbl);
+   pageFoot.innerHTML = "&nbsp;";
+   document.getElementById('name').focus();
+
+  }
+
+ </script>
+
+ <style>
+
+  button {
+   margin-left: 33%;
+   margin-right: 33%;
+   width: 33%;
+  }
+
+  h1 {
+   text-align: center;
+  }
+
+  input {
+   border-radius: 5px;
+  }
+
+  table {
+   margin-left: auto;
+   margin-right: auto;
+  }
+
+ </style>
+
+</head>
+
+<body>
+
+ <section id="sectionHead">
+  <div id="pageHead"></div>
+ </section>
+
+ <section id="sectionBody">
+  <div id="pageBody"></div>
+ </section>
+
+ <section id="sectionFooter">
+  <div id="pageFoot"></div>
+ </section>
+
+</body>
+
+</html>
